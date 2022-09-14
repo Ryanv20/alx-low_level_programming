@@ -2,16 +2,32 @@
 #include <stdio.h>
 
 /**
- * _abs - function that computes the absolute value of an integer
+ * print_sign - function to check for a sign of a number
  * @c: is the int that will use for the argument of the function
  * Return: 0
  */
-int_abs(int c)
+int print_sign(int n)
 {
-	if (c > 0 || c ==0)
+	if (n > 0)
 	{
-		return(c);
+		_putchar('n');
+		return (1);
 	}
+
+	else if (n < 0)
+
+	{
+
+		_putchar('-');
+
+		return (-1);
+
+	}
+
 	else
-		return (c * -1);
+
+	{
+		putchar('0');
+		return (0);
+	}
 }
