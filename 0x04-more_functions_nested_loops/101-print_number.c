@@ -19,7 +19,7 @@ void print_number(int n)
 	}
 
 	j = i;
-	count = i;
+	count = 1;
 
 	while (j > 9)
 	{
