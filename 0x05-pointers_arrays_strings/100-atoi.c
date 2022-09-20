@@ -14,8 +14,8 @@ int _atoi(char *s)
 	{
 		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
 			break;
-		
-		if (*(s + count) >= '-')
+
+		if (*(s + count) == '-')
 			k *= -1;
 
 		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
@@ -25,7 +25,6 @@ int _atoi(char *s)
 			size++;
 		}
 		count++;
-
 	}
 
 	for (i = count - size; i < count; i++)
