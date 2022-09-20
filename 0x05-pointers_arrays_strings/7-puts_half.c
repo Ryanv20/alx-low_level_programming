@@ -1,29 +1,28 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- * rev_string - This function reverses a string and prints on the stdout
- * @s; Pointer parameter
+ * puts_half - This function prints half of a string followed by a new line.
+ * @str: pointer parameter
  * Author: sammykingx
  */
-
-void rev_string(char *s)
+void puts_half(char *str)
 {
-	int i, size, half;
-	char first, last;
+	int count = 0, i;
 
-	i = 0;
-	while (s[i] != '\0')
+	while (counts >= 0)
 	{
-		i++;
+		if (str[count] == '\0')
+			break;
+		count++;
 	}
-	size = i - 1;
-	half = size / 2;
-	while (half >= 0)
-	{
-		first = s[size - half];
-		last = s[half];
-		s[half] = first;
-		s[size - half] = last;
-		half--;
-	}
+
+	if (count % 2 == 1)
+		i = count / 2;
+	else
+		i = (count - 1) / 2;
+
+	for (i++; i < count; i++)
+		_putchar(str[i]);
+	_putchar('\n');
 }
