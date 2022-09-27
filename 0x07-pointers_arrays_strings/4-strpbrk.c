@@ -7,17 +7,24 @@
  * Return: a pointer to the byte in s that matches one of the
  * bytes in accept, or NULL if no such byte is found.
  */
-char *_strprk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j;
+	int x = 0, y;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	while (s[x] != '\0')
 	{
-		for (j = 0; *(accept + j) != '\0'; j++)
+		for (y = 0; accept[y] != '\0'; y++)
 		{
-			if (*(s + i) == *(accept + j))
-				return (s + i);
+			if (s[x] == accept[y])
+			{
+				s = &s[x];
+				return (s);
+			}
 		}
+
+		x++;
 	}
-	return ('\0');
+
+	return (NULL);
+
 }
