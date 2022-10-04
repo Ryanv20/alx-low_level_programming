@@ -33,14 +33,14 @@ int main(int argc, char *argv[])
 	/*Declaring While*/
 	while (coins[position] != '\0')
 	{
-		if (total >= coins[positions])
+		if (total >= coins[position])
 		{
-			aux = (total / coins[positions]);
+			aux = (total / coins[position]);
 			change += aux;
-			total -= coins[positions] * aux;
+			total -= coins[position] * aux;
 		}
 
-		positions++;
+		position++;
 	}
 	printf("%d\n", change);
 
