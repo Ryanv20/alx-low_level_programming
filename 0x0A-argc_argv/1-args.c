@@ -4,15 +4,14 @@
 /**
  * main - Print the name of the program
  * @argc: Count arguements
- * @argv: Arguements
- *
+ * @argv: Arguments
  * Return: Always 0 (success)
  */
 
 int main(int argc, char *argv[])
 {
-(void) argc;
-printf("%s\n", argc[0]);
+	(void) argv; /*Ignore argv*/
+	printf("%i\n", argc - 1);
 
-return (0);
+	return (0);
 }
