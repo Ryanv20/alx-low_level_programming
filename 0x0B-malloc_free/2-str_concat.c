@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strlen - counts array
+ * _strlen - count array
  * @s: array of elements
  * Return: i
  */
@@ -34,6 +34,9 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 		s1 = "";
 
+	if (s2 == NULL)
+		s2 = "";
+
 	/*count size total*/
 	size = (_strlen(s1) + _strlen(s2) + 1);
 
@@ -46,12 +49,13 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	/*Concatenate arrays*/
-	for (i = 0; *(s1 + i) != '\0'; i++)
+	for (j = 0; *(s1 + i) != '\0'; i++)
 		*(dst + i) = *(s1 + i);
 
 	for (j = 0; *(s2 + j) != '\0'; j++)
 	{
 		*(dst + i) = *(s2 + j);
+
 		i++;
 	}
 
