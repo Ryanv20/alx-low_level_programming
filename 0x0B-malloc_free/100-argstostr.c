@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * argstostr - prints args
  * @ac: takes in width of grid
@@ -33,7 +34,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (b = 0; av[a][b] != '\0'; b++)
 		{
-			str[c] = '\n';
+			str[c] = av[a][b];
 			c++;
 		}
 		str[c] = '\n';
