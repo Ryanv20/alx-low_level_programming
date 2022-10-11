@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Prints the name of the file program was complied from
- * Return: Always 0
+ * main - Program compilation starts from the main
+ * Description: this program prints the name of the file it was compilied from
+ * Return: 0 (success)
  */
+
+int main(void)
 {
-printf("%s\n", _FILE_);
-return (0);
+	printf("%s\n", _FILE_);
+	return (0);
 }
